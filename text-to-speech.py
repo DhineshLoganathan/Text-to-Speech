@@ -7,11 +7,7 @@ def text_to_speech_gtts(text):
     tts.save("output.mp3")
     st.audio("output.mp3", format="audio/mp3")
 
-def text_to_speech_pyttsx3(text):
-    engine = pyttsx3.init()
-    engine.save_to_file(text, 'output.mp3')
-    engine.runAndWait()
-    st.audio("output.mp3", format="audio/mp3")
+
 
 def main():
     st.title("Text to Speech App")
@@ -21,8 +17,6 @@ def main():
     if st.button("Convert to Speech"):
         if engine_choice == "gtts":
             text_to_speech_gtts(text)
-        elif engine_choice == "pyttsx3":
-            text_to_speech_pyttsx3(text)
 
 if __name__ == "__main__":
     main()
