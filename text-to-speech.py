@@ -1,6 +1,5 @@
 import streamlit as st
 from gtts import gTTS
-import pyttsx3
 
 def text_to_speech_gtts(text):
     tts = gTTS(text)
