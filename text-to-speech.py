@@ -11,7 +11,7 @@ def text_to_speech_gtts(text):
 def main():
     st.title("Text to Speech App")
     text = st.text_area("Enter the text you want to convert to speech:")
-    engine_choice = st.radio("Choose TTS Engine:", ("gtts", "pyttsx3"))
+    engine_choice = st.radio("Choose TTS Engine:", ("gtts"))
 
     if st.button("Convert to Speech"):
         if engine_choice == "gtts":
